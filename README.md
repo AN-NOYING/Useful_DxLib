@@ -1,6 +1,8 @@
 # What is this?!
 This is a header file created to make [DxLib](https://dxlib.xsrv.jp/ "DxLib") a little easier to use.
 
+DxLib를 조금 더 쉽게 사용하기 위해 작성한 헤더 파일입니다.
+
 ## Example 1
 ```cpp
 #include "DxLib.hpp" // !!!!!
