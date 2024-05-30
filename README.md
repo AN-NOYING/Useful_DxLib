@@ -21,6 +21,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 It can be confusing whether `0` in `DxLib_Init() == 0` means success or failure.
 
+`DxLib_Init() == 0`에서 `0`이 무엇을 의미하는지 헷갈릴 수 있습니다.
+
 ```cpp
 #include "DxLib.hpp" // !!!!!
 
@@ -36,6 +38,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 ```
 
 You can use `DXLIB_SUCCESS` or `DXLIB_FAILURE` to avoid confusion.
+
+`DXLIB_SUCCESS`나 `DXLIB_FAILURE` 매크로를 사용하여 혼동을 방지할 수 있습니다.
 
 ## Example 2
 ```cpp
@@ -65,6 +69,8 @@ With hexadecimal, it's hard to tell what color it is.
 
 You can use `GetColor(255, 255, 255)`, but it's not intuitive.
 
+16진수로 색상을 표현하면 어떠한 색인지 알기 힘듭니다. `GetColor(255, 255, 255)` RGB 색상으로 표현해도 직관적이지 않습니다.
+
 ```cpp
 #include "DxLib.hpp" // !!!!!
 
@@ -92,6 +98,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 `COLOR_WHITE`, `COLOR_CORAL`, `COLOR_SKYBLUE` ... etc.
 
 Please check the color at [WebColors](https://en.wikipedia.org/wiki/Web_colors) and change `{COLOR_NAME}` in `COLOR_{COLOR_NAME}`.
+
+`COLOR_WHITE`, `COLOR_CORAL`, `COLOR_SKYBLUE` 등의 상수를 이용해 어떠한 색상을 사용 중인지 쉽게 알 수 있습니다.
+
+[WebColors](https://en.wikipedia.org/wiki/Web_colors)에서 색상 이름을 확인하신 후 `COLOR_{COLOR_NAME}`에서 `{COLOR_NAME}`을 치환해주세요.
 
 ## Example 3
 ```cpp
@@ -135,6 +145,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 In game development, we use **radian** angle. This can be awkward for people who are used to **degree** angle.
 
+게임 개발에선 보통 각도 표현을 위해 **라디안** 단위를 사용합니다. **도수법**에 익숙한 우리에겐 이상하게 보일 지 모릅니다.
+
 ```cpp
 #include "DxLib.hpp"   // !!!!!
 
@@ -157,6 +169,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 You can do the same thing with `90.0_DegF`.
 
+`90.0_DegF`로 똑같이 도수법을 호도법(라디안)으로 변환할 수 있습니다.
+
 ## Example 5
 ```cpp
 {
@@ -170,3 +184,5 @@ You can do the same thing with `90.0_DegF`.
 ```
 
 `GetHandleType` can be used to determine the type of the Handle.
+
+`GetHandleType` 함수로 어떤 변수에 담긴 핸들 값이 어떤 유형인지 확인할 수 있습니다.
