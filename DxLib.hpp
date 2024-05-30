@@ -261,7 +261,9 @@ static DxLib::VECTOR operator*(float value, const DxLib::VECTOR& vec) noexcept {
 /// @param vec2 DxLib::VECTOR
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator+=(DxLib::VECTOR& vec1, const DxLib::VECTOR& vec2) noexcept {
-  vec1 += vec2;
+  vec1.x += vec2.x;
+  vec1.y += vec2.y;
+  vec1.z += vec2.z;
   return vec1;
 }
 
@@ -270,7 +272,9 @@ static DxLib::VECTOR& operator+=(DxLib::VECTOR& vec1, const DxLib::VECTOR& vec2)
 /// @param value Value
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator+=(DxLib::VECTOR& vec, float value) noexcept {
-  vec += value;
+  vec.x += value;
+  vec.y += value;
+  vec.z += value;
   return vec;
 }
 
@@ -279,7 +283,9 @@ static DxLib::VECTOR& operator+=(DxLib::VECTOR& vec, float value) noexcept {
 /// @param vec DxLib::VECTOR
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator+=(float value, DxLib::VECTOR& vec) noexcept {
-  vec += value;
+  vec.x += value;
+  vec.y += value;
+  vec.z += value;
   return vec;
 }
 
@@ -288,7 +294,9 @@ static DxLib::VECTOR& operator+=(float value, DxLib::VECTOR& vec) noexcept {
 /// @param vec2 DxLib::VECTOR
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator-=(DxLib::VECTOR& vec1, const DxLib::VECTOR& vec2) noexcept {
-  vec1 -= vec2;
+  vec1.x -= vec2.x;
+  vec1.y -= vec2.y;
+  vec1.z -= vec2.z;
   return vec1;
 }
 
@@ -297,7 +305,9 @@ static DxLib::VECTOR& operator-=(DxLib::VECTOR& vec1, const DxLib::VECTOR& vec2)
 /// @param value Value
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator-=(DxLib::VECTOR& vec, float value) noexcept {
-  vec -= value;
+  vec.x -= value;
+  vec.y -= value;
+  vec.z -= value;
   return vec;
 }
 
@@ -306,7 +316,9 @@ static DxLib::VECTOR& operator-=(DxLib::VECTOR& vec, float value) noexcept {
 /// @param vec DxLib::VECTOR
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator-=(float value, DxLib::VECTOR& vec) noexcept {
-  vec -= value;
+  vec.x -= value;
+  vec.y -= value;
+  vec.z -= value;
   return vec;
 }
 
@@ -315,7 +327,9 @@ static DxLib::VECTOR& operator-=(float value, DxLib::VECTOR& vec) noexcept {
 /// @param vec2 DxLib::VECTOR
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator*=(DxLib::VECTOR& vec1, const DxLib::VECTOR& vec2) noexcept {
-  vec1 *= vec2;
+  vec1.x *= vec2.x;
+  vec1.y *= vec2.y;
+  vec1.z *= vec2.z;
   return vec1;
 }
 
@@ -324,7 +338,9 @@ static DxLib::VECTOR& operator*=(DxLib::VECTOR& vec1, const DxLib::VECTOR& vec2)
 /// @param value Value
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator*=(DxLib::VECTOR& vec, float value) noexcept {
-  vec *= value;
+  vec.x *= value;
+  vec.y *= value;
+  vec.z *= value;
   return vec;
 }
 
@@ -333,6 +349,8 @@ static DxLib::VECTOR& operator*=(DxLib::VECTOR& vec, float value) noexcept {
 /// @param vec DxLib::VECTOR
 /// @return DxLib::VECTOR
 static DxLib::VECTOR& operator*=(float value, DxLib::VECTOR& vec) noexcept {
-  vec *= value;
+  vec.x *= value;
+  vec.y *= value;
+  vec.z *= value;
   return vec;
 }
