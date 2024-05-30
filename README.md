@@ -10,7 +10,7 @@ DxLib를 조금 더 쉽게 사용하기 위해 작성한 헤더 파일입니다.
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
   // wtf?
-  if (DxLib_Init() == 0)
+  if (DxLib_Init() != 0)
   {
     return EXIT_FAILURE;
   }
